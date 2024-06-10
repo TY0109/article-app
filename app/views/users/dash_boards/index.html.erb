@@ -1,0 +1,6 @@
+<div class="dash-boards">
+<h1>Dash Boards</h1>
+<h2><%=current_user.name %></h2>
+  <%=link_to "記事一覧", users_articles_path, class:"btn btn-primary btn-article-index" %><br />
+  <%=link_to "編集", edit_user_registration_path, class:"btn btn-primary btn-article-edit" %><br />
+  <%=link_to "ログアウト", logout_path, class:"btn btn-warning btn-article-logout" %><br />

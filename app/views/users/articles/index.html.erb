@@ -1,0 +1,35 @@
+<h1 class="text-center">記事一覧</h1>
+<div class="row">
+  <div class="col-md-10 offset-1">
+    <div class="btn-article">
+      <%=link_to "新規作成", new_users_article_path, class:"btn btn-primary" %> 
+    </div>
+    <table class="table">
+      <thead>
+        <td>詳細表示</td>
+        <td>タイトル</td>
+        <td>内容</td>
+        <td>画像</td>
+        <td>編集・削除</td>
+      </thead>
+      <% @articles.each do |article| %>
+      <tbody>
+          <td><%=link_to "詳細", users_article_path(article), class:"btn btn-primary" %>  
+          <td><%=article.title %></td>
+          <td><%=article.content %></td>
+          <td>
+            <% if article.img.present? %>
+              <div class="img-area" %>
+                <%= image_tag article.img.url %>
+              </div>
+            <% end %>
+          </td>
+          <td>     
+            <%=link_to "編集", edit_users_article_path(article), class:"btn btn-success" %> 
+            <%=link_to "削除", users_article_path(article), method: :delete, class:"btn btn-danger" %> 
+          </td>
+      </tbody>
+      <% end %>
+    </table>
+  </div>
+</div>

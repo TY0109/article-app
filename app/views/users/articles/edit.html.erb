@@ -1,0 +1,22 @@
+<h1 class="text-center"><%= t(".edit_articles") %></h1>
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <%= form_with(model: @article, url: users_article_path, method: :patch, local: true) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %> 
+      
+      <%= f.label:title, class: "label-form" %>
+      <%= f.text_field:title, class: "form-control" %>
+      
+      <%= f.label :content, class: "label-form" %>
+      <%= f.text_area :content, rows:5, class: "form-control" %>
+      
+      <%= f.label :img %> 
+      <%= f.file_field :img, id: :article_img %> 
+
+      <div class="btn-article">
+        <%= f.submit t(".update"), class: "btn btn-primary" %>
+      </div>
+      <%= link_to t(".back"), users_article_path %>
+    <% end %>
+  </div>
+</div>

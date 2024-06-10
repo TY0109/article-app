@@ -1,0 +1,28 @@
+<h1 class="text-center"><%= t(".description") %></h1>
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <table class="table">
+      <thead>
+        <td><%= t(".title") %></td>
+        <td><%= t(".content") %></td>
+        <td><%= t(".image") %></td>
+      </thead>
+      <tbody>
+        <td><%= @article.title %></td>
+        <td><%= @article.content %></td>
+        <td>
+          <% if @article.img.present? %>
+            <div class="img-area" %>
+              <%= image_tag @article.img.url %>
+            </div>
+          <% end %>
+        </td>
+      </tbody>
+    </table>
+    <div class="btn-article">
+      <%= link_to t(".edit"), edit_users_article_path, class:"btn btn-success" %>
+      <%= link_to t(".destroy"), users_article_path, method: :delete, class:"btn btn-danger" %><br/>
+      <%= link_to t(".back_to_index"), users_articles_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+// フラッシュメッセージ //
+.alert-notice{
+  text-align:center;
+  color:#31708f;
+  background-color:#d9edf7;
+}
+
+.alert-alert{
+  text-align:center;
+  color:#a94442;
+  background-color:#f2dede;
+}
+
+// usersページ //
+.actions{
+  text-align:center;
+}
+
+.btn-login{
+  margin:20px 0px;
+}
+
+.btn-edit{
+  margin-bottom:0px;
+  width:150px
+}
+
+.btn-logout{
+  margin-top:0px;
+  width:150px;
+}
+
+.account-delete{
+  text-align:center;
+}
+
+// ダッシュボード
+.dash-boards{
+  text-align:center;
+}
+
+.btn-article-index{
+  width:200px;
+  margin-top:10px;
+}
+
+.btn-article-edit{
+  width:200px;
+  margin-top:10px;
+}
+
+.btn-article-logout{
+  width:200px;
+  margin-top:10px;
+}
+  
+// 記事ページ
+.btn-article{
+  text-align:center;
+}
