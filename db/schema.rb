@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2022_06_09_151146) do
   create_table "articles", charset: "utf8mb3", force: :cascade do |t|
     t.string "title", limit: 10, null: false
     t.text "content", null: false
-    t.string "img"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -17,13 +17,6 @@
           <td><%=link_to "詳細", users_article_path(article), class:"btn btn-primary" %>  
           <td><%=article.title %></td>
           <td><%=article.content %></td>
-          <td>
-            <% if article.img.present? %>
-              <div class="img-area" %>
-                <%= image_tag article.img.url %>
-              </div>
-            <% end %>
-          </td>
           <td>     
             <%=link_to "編集", edit_users_article_path(article), class:"btn btn-success" %> 
             <%=link_to "削除", users_article_path(article), method: :delete, class:"btn btn-danger" %> 
